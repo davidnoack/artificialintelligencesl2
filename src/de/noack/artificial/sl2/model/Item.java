@@ -1,15 +1,11 @@
 package de.noack.artificial.sl2.model;
 
-public class Item {
+public class Item extends DomainElement {
 
-	private static int ID_COUNTER = 0;
-
-	private int id;
 	private String name;
 
 	public Item(String name) {
-		this.id = ID_COUNTER;
-		ID_COUNTER++;
+		super();
 		this.name = name;
 	}
 
@@ -19,13 +15,5 @@ public class Item {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 }
