@@ -1,4 +1,4 @@
-package sample;
+package de.noack.artificial.sl2.gui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
