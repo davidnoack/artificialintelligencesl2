@@ -1,7 +1,5 @@
 package de.noack.artificial.sl2.model;
 
-import java.util.Objects;
-
 public class SoldItems {
     private Item item;
     private int count;
