@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl2/gui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/noack/artificial/sl2/gui/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl2/logic/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/noack/artificial/sl2/logic/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Cashpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Cashpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Market.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Market.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/SoldItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/SoldItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Stock.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,30 +65,32 @@
     <session id="-1499359691">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.13" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="8" />
+          <entry key="java" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="8" />
+          <entry key="JAVA" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3601" />
+          <entry key="java" value="5831" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3601" />
+          <entry key="JAVA" value="5831" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
@@ -95,18 +104,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Market.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+            <state relative-caret-position="374">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
               <folding>
-                <element signature="e#337#338#0" expanded="true" />
-                <element signature="e#388#389#0" expanded="true" />
-                <element signature="e#424#425#0" expanded="true" />
-                <element signature="e#475#476#0" expanded="true" />
-                <element signature="e#442#443#0" expanded="true" />
-                <element signature="e#470#471#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/ArrayList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="656" selection-start-line="656" selection-end-line="656" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl2/gui/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="676">
+              <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#start#0;class#Main#0" />
+                <element signature="method#commitCount#0;class#Main#0" />
+                <element signature="method#createItemPromptWindow#0;class#Main#0" />
               </folding>
             </state>
           </provider>
@@ -115,24 +143,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Stock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="391">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#226#227#0" expanded="true" />
-                <element signature="e#260#261#0" expanded="true" />
-                <element signature="e#312#313#0" expanded="true" />
-                <element signature="e#344#345#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl2/logic/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -140,14 +155,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Cashpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
-              <folding>
-                <element signature="e#635#636#0" expanded="true" />
-                <element signature="e#667#668#0" expanded="true" />
-                <element signature="e#700#701#0" expanded="true" />
-                <element signature="e#729#730#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="510">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
             </state>
           </provider>
         </entry>
@@ -155,14 +164,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Item.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-              <folding>
-                <element signature="e#324#325#0" expanded="true" />
-                <element signature="e#344#345#0" expanded="true" />
-                <element signature="e#384#385#0" expanded="true" />
-                <element signature="e#411#412#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="170">
+              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -173,14 +176,8 @@
             <state>
               <caret column="38" selection-start-column="38" selection-end-column="38" />
               <folding>
-                <element signature="e#251#252#0" expanded="true" />
-                <element signature="e#278#279#0" expanded="true" />
-                <element signature="e#316#317#0" expanded="true" />
-                <element signature="e#348#349#0" expanded="true" />
                 <element signature="e#224#225#0" expanded="true" />
-                <element signature="e#252#253#0" expanded="true" />
-                <element signature="e#291#292#0" expanded="true" />
-                <element signature="e#325#326#0" expanded="true" />
+                <element signature="e#251#252#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -220,12 +217,13 @@
         <option value="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Unit.java" />
         <option value="$PROJECT_DIR$/src/de/noack/artificial/sl2/de/noack/artificial/sl2/util/IdUtil.java" />
         <option value="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/DomainElement.java" />
-        <option value="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Item.java" />
         <option value="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Market.java" />
+        <option value="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Stock.java" />
         <option value="$PROJECT_DIR$/src/de/noack/artificial/sl2/logic/Controller.java" />
         <option value="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Cashpoint.java" />
-        <option value="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Stock.java" />
         <option value="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/SoldItems.java" />
+        <option value="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Item.java" />
+        <option value="$PROJECT_DIR$/src/de/noack/artificial/sl2/gui/Main.java" />
       </list>
     </option>
   </component>
@@ -236,7 +234,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1612" />
@@ -254,7 +252,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -318,12 +315,13 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537205336535" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537721306569" />
     <property name="dynamic.classpath" value="false" />
     <property name="recentsLimit" value="5" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\david\Dropbox\IdeaProjects\artificialintelligencesl2\src\de\noack\artificial\sl2\logic" />
       <recent name="C:\Users\david\Dropbox\IdeaProjects\artificialintelligencesl2\src\de\noack\artificial\sl2\gui" />
     </key>
   </component>
@@ -423,16 +421,19 @@
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1537097256542" duration="4548000" />
       <workItem from="1537198310013" duration="6807000" />
+      <workItem from="1537613366602" duration="431000" />
+      <workItem from="1537712253383" duration="8377000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12657000" />
+    <option name="totallyTimeSpent" value="21465000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.25426438" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.16017488" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -441,8 +442,8 @@
       <window_info id="UI Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32962447" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3299532" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32917318" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -495,13 +496,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl2/gui/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl2/model/DomainElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -513,10 +511,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl2/model/DomainElement.java">
+    <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Cashpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="510">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
@@ -525,76 +523,76 @@
         <state>
           <caret column="38" selection-start-column="38" selection-end-column="38" />
           <folding>
-            <element signature="e#251#252#0" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#348#349#0" expanded="true" />
             <element signature="e#224#225#0" expanded="true" />
-            <element signature="e#252#253#0" expanded="true" />
-            <element signature="e#291#292#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-          <folding>
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#384#385#0" expanded="true" />
-            <element signature="e#411#412#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Cashpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
-          <folding>
-            <element signature="e#635#636#0" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
-            <element signature="e#700#701#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
+            <element signature="e#251#252#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl2/logic/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl2/logic/LogicHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="28" column="57" lean-forward="true" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Stock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="391">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#226#227#0" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
-            <element signature="e#312#313#0" expanded="true" />
-            <element signature="e#344#345#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/com/sun/javafx/tk/quantum/GlassViewEventHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="431" selection-start-line="431" selection-end-line="431" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Market.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+        <state relative-caret-position="374">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
           <folding>
-            <element signature="e#337#338#0" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-            <element signature="e#470#471#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="656" selection-start-line="656" selection-end-line="656" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl2/gui/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#start#0;class#Main#0" />
+            <element signature="method#commitCount#0;class#Main#0" />
+            <element signature="method#createItemPromptWindow#0;class#Main#0" />
           </folding>
         </state>
       </provider>

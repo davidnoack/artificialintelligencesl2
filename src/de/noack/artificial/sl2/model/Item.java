@@ -8,6 +8,7 @@ public class Item extends DomainElement {
 	public Item(String name) {
 		super();
 		this.name = name;
+		demand = 0;
 	}
 
 	public String getName() {
