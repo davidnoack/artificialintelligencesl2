@@ -1,6 +1,7 @@
 package de.noack.artificial.sl2.gui;
 
 import de.noack.artificial.sl2.model.Item;
+import de.noack.artificial.sl2.model.Market;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -21,6 +22,7 @@ public class Main extends Application {
 	Scene noOfItemsPrompt;
 	List <Scene> createItemPrompts = new ArrayList <>();
 
+	Market market = new Market(50);
 	List <Item> itemList = new ArrayList <>();
 
 	public static void main(String[] args) {
@@ -110,17 +112,37 @@ public class Main extends Application {
 	}
 
 	private void initMainWindow() {
+		initDomainModel();
+		Scene mainScene = new Scene(loadMainWindow(), 400, 400);
+		window.setScene(mainScene);
+	}
 
-
+	private GridPane loadMainWindow() {
 		GridPane gridPane = new GridPane();
 
 		int xPos = 0;
-		int yPos = 0;
+		int yPos = 1;
 
-		for(Item i : itemList) {
+		gridPane.add(new Label("Stock Size : 50"),0,0);
+		gridPane.add(new Label("Items:"), 0, 1);
+		gridPane.add(new Label("Demand:"), 1, 1);
+		gridPane.add(new Label("Stock:"), 2, 1);
+		gridPane.add(new Label("Recommendation:"), 3, 1);
 
+		for (Item item : itemList) {
+			yPos++;
+			gridPane.add(new Label(item.getName()), xPos++, yPos);
+			gridPane.add(new Label(String.valueOf(item.getDemand())), xPos++, yPos);
+			gridPane.add(new Label(String.valueOf(market.getStock().getInventory().get(item))), xPos++, yPos);
+			gridPane.add(new Label("Recommendation"), xPos++, yPos);
+			xPos = 0;
 		}
+		return gridPane;
+	}
 
-		Scene mainScene = new Scene(gridPane);
+	private void initDomainModel() {
+		for(Item item : itemList) {
+			market.getStock().getInventory().put(item, Integer.valueOf(50 / itemList.size()));
+		}
 	}
 }
