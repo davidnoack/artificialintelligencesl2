@@ -22,6 +22,7 @@ public class Cashpoint extends DomainElement {
             }
         }
         soldItems.add(new SoldItems(itemToSell));
+        parent.recalculateDemandForAllItems();
     }
 
     public HashSet<SoldItems> getSoldItems() {

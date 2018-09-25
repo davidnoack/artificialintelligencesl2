@@ -17,8 +17,10 @@ import java.util.List;
 
 public class Main extends Application {
 
-    Stage window;
-    List<Scene> createItemPrompts = new ArrayList<>();
+    static int xPos = 0;
+    static int yPos = 2;
+    static Stage window;
+    static List<Scene> createItemPrompts = new ArrayList<>();
 
     public static void main(String[] args) {
         launch(args);
@@ -109,16 +111,13 @@ public class Main extends Application {
         } else window.setScene(createItemPrompts.get(createItemPrompts.indexOf(scene) + 1));
     }
 
-    private void initMainWindow() {
+    public static void initMainWindow() {
         Scene mainScene = new Scene(loadMainWindow(), 400, 400);
         window.setScene(mainScene);
     }
 
-    private GridPane loadMainWindow() {
+    private static GridPane loadMainWindow() {
         GridPane gridPane = new GridPane();
-
-        int xPos = 0;
-        int yPos = 1;
 
         LogicHandler.getInstance().addStockSizeToDisplay(gridPane);
         gridPane.add(new Label("Items:"), 0, 1);

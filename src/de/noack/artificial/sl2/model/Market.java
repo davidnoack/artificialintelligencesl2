@@ -41,4 +41,11 @@ public class Market extends DomainElement {
 			itemWithSellingCount.getKey().setDemand(itemWithSellingCount.getValue().intValue() / amountOfAllSoldItems);
 		}
 	}
+
+	public Cashpoint getRandomCashpoint() {
+		for(Cashpoint cashpoint : cashpoints) {
+			return cashpoint;
+		}
+		return null;
+	}
 }
