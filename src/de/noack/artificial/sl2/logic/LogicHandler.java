@@ -42,10 +42,14 @@ public class LogicHandler {
             gridPane.add(new Label(inventoryEntry.getKey().getName()), xPos++, yPos);
             gridPane.add(new Label(String.valueOf(inventoryEntry.getKey().getDemand())), xPos++, yPos);
             gridPane.add(new Label(String.valueOf(inventoryEntry.getValue())), xPos++, yPos);
-            gridPane.add(new Label("Recommendation"), xPos++, yPos);
+            gridPane.add(new Label(inventoryEntry.getKey().getRecommendation()), xPos++, yPos);
 
-            Button buyItem = new Button("Buy!");
-            buyItem.setOnAction(e -> sellItemAndRefreshDisplay(inventoryEntry.getKey().getName()));
+            Button sellItem = new Button("Sell to Customer!");
+            sellItem.setOnAction(e -> sellItemAndRefreshDisplay(inventoryEntry.getKey().getName()));
+            gridPane.add(sellItem, xPos++, yPos);
+
+            Button buyItem = new Button("Buy for Inventory!");
+            buyItem.setOnAction(e -> market.getStock().buyForInventory(inventoryEntry.getKey(), 1));
             gridPane.add(buyItem, xPos, yPos++);
 
             xPos = 0;

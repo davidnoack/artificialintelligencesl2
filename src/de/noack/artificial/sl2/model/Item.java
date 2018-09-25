@@ -3,11 +3,13 @@ package de.noack.artificial.sl2.model;
 public class Item extends DomainElement {
 
     private String name;
-    private float demand;
+    private double demand;
+    private String recommendation;
 
     public Item(String name) {
         super();
         this.name = name;
+        recommendation = "";
         demand = 0;
     }
 
@@ -15,11 +17,19 @@ public class Item extends DomainElement {
         return name;
     }
 
-    public float getDemand() {
+    public double getDemand() {
         return demand;
     }
 
-    public void setDemand(float demand) {
+    public void setDemand(double demand) {
         this.demand = demand;
+    }
+
+    public String getRecommendation() {
+        return recommendation;
+    }
+
+    public void setRecommendation(String recommendation) {
+        this.recommendation = recommendation;
     }
 }

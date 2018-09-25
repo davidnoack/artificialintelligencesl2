@@ -13,10 +13,6 @@ public class SoldItems {
         return item;
     }
 
-    public void setItem(Item item) {
-        this.item = item;
-    }
-
     public int getCount() {
         return count;
     }
@@ -26,6 +22,6 @@ public class SoldItems {
     }
 
     public boolean isItemEqualTo(Item otherItem) {
-        return item.getName() != null && item.getName().equals(otherItem.getName());
+        return item.getName() != null && otherItem != null && item.getName().equals(otherItem.getName());
     }
 }

@@ -15,14 +15,15 @@ public class Cashpoint extends DomainElement {
 
     public void sellItem(String itemName) {
         Item itemToSell = parent.getStock().retrieveSellableItem(itemName);
-        for (SoldItems aldreadySoldItems : soldItems) {
-            if (aldreadySoldItems.isItemEqualTo(itemToSell)) {
-                aldreadySoldItems.increaseCount();
+        for (SoldItems alreadySoldItems : soldItems) {
+            if (alreadySoldItems.isItemEqualTo(itemToSell)) {
+                getParent().recalculateDemandForAllItems();
+                alreadySoldItems.increaseCount();
                 return;
             }
         }
+        getParent().recalculateDemandForAllItems();
         soldItems.add(new SoldItems(itemToSell));
-        parent.recalculateDemandForAllItems();
     }
 
     public HashSet<SoldItems> getSoldItems() {

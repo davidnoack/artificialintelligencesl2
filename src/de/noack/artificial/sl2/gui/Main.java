@@ -112,7 +112,7 @@ public class Main extends Application {
     }
 
     public static void initMainWindow() {
-        Scene mainScene = new Scene(loadMainWindow(), 400, 400);
+        Scene mainScene = new Scene(loadMainWindow(), 640, 320);
         window.setScene(mainScene);
     }
 

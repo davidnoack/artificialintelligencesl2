@@ -1,5 +1,7 @@
 package de.noack.artificial.sl2.model;
 
+import de.noack.artificial.sl2.gui.Main;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,6 +25,7 @@ public class Stock {
                 newAmount += inventory.get(item);
             }
             inventory.put(item, newAmount);
+            Main.initMainWindow();
         }
     }
 
@@ -40,6 +43,7 @@ public class Stock {
     public Item retrieveSellableItem(String itemName) {
         for (Map.Entry<Item, Integer> inventoryEntry : inventory.entrySet()) {
             if (inventoryEntry.getKey().getName().equals(itemName) && inventoryEntry.getValue().intValue() > 0) {
+                inventory.put(inventoryEntry.getKey(), inventoryEntry.getValue() - 1);
                 return inventoryEntry.getKey();
             }
         }
