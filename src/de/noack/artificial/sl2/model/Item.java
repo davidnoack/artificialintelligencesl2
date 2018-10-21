@@ -1,13 +1,12 @@
 package de.noack.artificial.sl2.model;
 
-public class Item extends DomainElement {
+public class Item {
 
     private String name;
     private double demand;
     private String recommendation;
 
     public Item(String name) {
-        super();
         this.name = name;
         recommendation = "";
         demand = 0;

@@ -1,60 +1,62 @@
 package de.noack.artificial.sl2.model;
 
-import de.noack.artificial.sl2.gui.Main;
-
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Stock stellt einen Bestand in Form eines Lagers dar. Dieser besitzt eine Maximalgröße,
+ * sowie ein Inventar. Der Bestand kann selbst Waren nachbestellen.
+ */
 public class Stock {
 
-    private int maxSize;
-    private HashMap<Item, Integer> inventory = new HashMap<>();
+	// Größe des Lagers
+	private int maxSize;
 
-    public Stock(int maxSize) {
-        this.maxSize = maxSize;
-    }
+	// Inventar der Waren mit Anzahl der lagernden
+	private HashMap <Item, Integer> inventory = new HashMap <>();
 
-    public HashMap<Item, Integer> getInventory() {
-        return inventory;
-    }
+	public Stock(int maxSize) {
+		this.maxSize = maxSize;
+	}
 
-    public void buyForInventory(Item item, int amount) {
-        if (isEnoughSpaceFor(amount)) {
-            Integer newAmount = amount;
-            if (inventory.containsKey(item)) {
-                newAmount += inventory.get(item);
-            }
-            inventory.put(item, newAmount);
-            Main.initMainWindow();
-        }
-    }
+	public HashMap <Item, Integer> getInventory() {
+		return inventory;
+	}
 
-    private boolean isEnoughSpaceFor(int amount) {
-        int sumUsedAmount = 0;
-        for (Integer usedAmount : inventory.values()) {
-            sumUsedAmount += usedAmount;
-            if (amount > (maxSize - sumUsedAmount)) {
-                return false;
-            }
-        }
-        return true;
-    }
+	// Wenn genug Platz im Inventar ist, wird der Bestand um den "amount" erweitert
+	public void buyForInventory(Item item, int amount) {
+		if (isEnoughSpaceFor(amount)) {
+			Integer newAmount = amount;
+			if (inventory.containsKey(item)) {
+				newAmount += inventory.get(item);
+			}
+			inventory.put(item, newAmount);
+		}
+	}
 
-    public Item retrieveSellableItem(String itemName) {
-        for (Map.Entry<Item, Integer> inventoryEntry : inventory.entrySet()) {
-            if (inventoryEntry.getKey().getName().equals(itemName) && inventoryEntry.getValue().intValue() > 0) {
-                inventory.put(inventoryEntry.getKey(), inventoryEntry.getValue() - 1);
-                return inventoryEntry.getKey();
-            }
-        }
-        return null;
-    }
+	// Prüft, ob die Summe der einzel lagernden Waren inkl. der zu kaufenden Menge
+	// die Größe des Lagers nicht übersteigen würden
+	private boolean isEnoughSpaceFor(int amount) {
+		int sumUsedAmount = 0;
+		for (Integer usedAmount : inventory.values()) sumUsedAmount += usedAmount;
+		return (amount <= (maxSize - sumUsedAmount));
+	}
 
-    public int getMaxSize() {
-        return maxSize;
-    }
+	public Item retrieveSellableItem(String itemName) {
+		for (Map.Entry <Item, Integer> inventoryEntry : inventory.entrySet()) {
+			if (inventoryEntry.getKey().getName().equals(itemName) && inventoryEntry.getValue().intValue() > 0) {
+				inventory.put(inventoryEntry.getKey(), inventoryEntry.getValue() - 1);
+				return inventoryEntry.getKey();
+			}
+		}
+		return null;
+	}
 
-    public void setMaxSize(int maxSize) {
-        this.maxSize = maxSize;
-    }
+	public int getMaxSize() {
+		return maxSize;
+	}
+
+	public void setMaxSize(int maxSize) {
+		this.maxSize = maxSize;
+	}
 }

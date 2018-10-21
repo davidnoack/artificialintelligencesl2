@@ -1,71 +1,54 @@
 package de.noack.artificial.sl2.model;
 
-import de.noack.artificial.sl2.gui.Main;
+import java.util.*;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
+public class Market {
 
-public class Market extends DomainElement {
+	private Stock stock;
 
-    private Stock stock;
+	private List <Cashpoint> cashpoints = new ArrayList <>();
 
-    private HashSet<Cashpoint> cashpoints = new HashSet<>();
+	public Market(int maxStockSize) {
+		stock = new Stock(maxStockSize);
+	}
 
-    public Market(int maxStockSize) {
-        super();
-        createStock(maxStockSize);
-    }
+	public void createCashpoint() {
+		cashpoints.add(new Cashpoint(this));
+	}
 
-    public void createCashpoint() {
-        cashpoints.add(new Cashpoint(this));
-    }
+	public void recalculateDemandForAllItems() {
+		double amountOfAllSoldItems = 0;
+		Map <Item, Double> amountsPerItem = new HashMap <>();
+		for (Cashpoint singleCashpoint : cashpoints) {
+			Set <SoldItems> allSoldItemsOfThisCashpoint = singleCashpoint.getSoldItems();
+			for (SoldItems soldItems : allSoldItemsOfThisCashpoint) {
+				amountOfAllSoldItems = amountOfAllSoldItems + soldItems.getCount();
+				double oldAmount = 0;
+				if (amountsPerItem.containsKey(soldItems.getItem())) oldAmount = amountsPerItem.get(soldItems.getItem());
+				amountsPerItem.put(soldItems.getItem(), oldAmount + soldItems.getCount());
+			}
+		}
+		for (Map.Entry <Item, Double> itemWithSellingCount : amountsPerItem.entrySet())
+			itemWithSellingCount.getKey().setDemand(itemWithSellingCount.getValue() / amountOfAllSoldItems);
+	}
 
-    public void createStock(int maxSize) {
-        stock = new Stock(maxSize);
-    }
+	public void refreshRecommendations() {
+		for (Map.Entry <Item, Integer> itemsInStock : stock.getInventory().entrySet()) {
+			Item item = itemsInStock.getKey();
+			double count = itemsInStock.getValue().doubleValue();
+			String buy = "Buy for Inventory!";
+			if (item.getDemand() > 0.5D || (item.getDemand() > (1 / stock.getInventory().size()) && count < 0.1 * stock.getMaxSize()))
+				item.setRecommendation(buy);
+			else if (count == 0) item.setRecommendation(buy);
+			else item.setRecommendation("");
+		}
+	}
 
-    public Stock getStock() {
-        return stock;
-    }
+	public Cashpoint getRandomCashpoint() {
+		return cashpoints.get((new Random()).nextInt(cashpoints.size()));
+	}
 
-    public void recalculateDemandForAllItems() {
-        int amountOfAllSoldItems = 0;
-        HashMap<Item, Integer> amountsPerItem = new HashMap<>();
-        for (Cashpoint singleCashpoint : cashpoints) {
-            HashSet<SoldItems> allSoldItemsOfThisCashpoint = singleCashpoint.getSoldItems();
-            for (SoldItems soldItems : allSoldItemsOfThisCashpoint) {
-                amountOfAllSoldItems += soldItems.getCount();
-                int oldAmount = amountsPerItem.get(soldItems.getItem()) == null ? 0 : amountsPerItem.get(soldItems.getItem());
-                amountsPerItem.put(soldItems.getItem(), oldAmount + soldItems.getCount());
-            }
-        }
-        for (Map.Entry<Item, Integer> itemWithSellingCount : amountsPerItem.entrySet()) {
-            itemWithSellingCount.getKey().setDemand(itemWithSellingCount.getValue() / amountOfAllSoldItems);
-        }
-        refreshRecommendations();
-    }
-
-    public void refreshRecommendations() {
-        for (Map.Entry<Item, Integer> itemsInStock : stock.getInventory().entrySet()) {
-            Item item = itemsInStock.getKey();
-            double count = itemsInStock.getValue().doubleValue();
-            String buy = "Buy for Inventory!";
-            if ((count < (stock.getMaxSize() * 0.1)) && (item.getDemand() > 0.5F)) {
-                item.setRecommendation(buy);
-            } else if (count == 0) {
-                item.setRecommendation(buy);
-            } else {
-                item.setRecommendation("");
-            }
-        }
-        Main.initMainWindow();
-    }
-
-    public Cashpoint getRandomCashpoint() {
-        for (Cashpoint cashpoint : cashpoints) {
-            return cashpoint;
-        }
-        return null;
-    }
+	public Stock getStock() {
+		return stock;
+	}
 }
