@@ -3,19 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/artificialintelligencesl2/de/noack/artificial/sl2/gui/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/artificialintelligencesl2/de/noack/artificial/sl2/gui/StockSimulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/artificialintelligencesl2/de/noack/artificial/sl2/gui/StockSimulation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/artificialintelligencesl2/de/noack/artificial/sl2/logic/LogicHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/artificialintelligencesl2/de/noack/artificial/sl2/logic/LogicHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/artificialintelligencesl2/de/noack/artificial/sl2/model/Market.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/artificialintelligencesl2/de/noack/artificial/sl2/model/Market.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/artificialintelligencesl2/de/noack/artificial/sl2/model/Stock.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/artificialintelligencesl2/de/noack/artificial/sl2/model/Stock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl2/gui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/noack/artificial/sl2/gui/StockSimulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl2/gui/StockSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/noack/artificial/sl2/gui/StockSimulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl2/logic/LogicHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/noack/artificial/sl2/logic/LogicHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Cashpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Cashpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/DomainElement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Market.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Market.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/SoldItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/SoldItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/noack/artificial/sl2/model/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/noack/artificial/sl2/util/IdUtil.java" beforeDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,12 +88,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="10972" />
+          <entry key="java" value="11040" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10972" />
+          <entry key="JAVA" value="11040" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
@@ -119,8 +110,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl2/gui/StockSimulation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="146" column="53" selection-start-line="146" selection-start-column="53" selection-end-line="146" selection-end-column="53" />
+            <state relative-caret-position="405">
+              <caret line="135" column="56" selection-start-line="135" selection-start-column="56" selection-end-line="135" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -196,8 +187,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl2/logic/LogicHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="46" column="55" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+            <state relative-caret-position="578">
+              <caret line="56" column="48" lean-forward="true" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#866#867#0" expanded="true" />
@@ -331,7 +322,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540152481457" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540152804802" />
     <property name="dynamic.classpath" value="false" />
     <property name="recentsLimit" value="5" />
   </component>
@@ -447,12 +438,12 @@
       <workItem from="1538987671879" duration="613000" />
       <workItem from="1540130626852" duration="322000" />
       <workItem from="1540131209676" duration="790000" />
-      <workItem from="1540146605718" duration="5073000" />
+      <workItem from="1540146605718" duration="5397000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41367000" />
+    <option name="totallyTimeSpent" value="41691000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -670,8 +661,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl2/logic/LogicHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="46" column="55" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+        <state relative-caret-position="578">
+          <caret line="56" column="48" lean-forward="true" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#866#867#0" expanded="true" />
@@ -682,8 +673,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/de/noack/artificial/sl2/gui/StockSimulation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="146" column="53" selection-start-line="146" selection-start-column="53" selection-end-line="146" selection-end-column="53" />
+        <state relative-caret-position="405">
+          <caret line="135" column="56" selection-start-line="135" selection-start-column="56" selection-end-line="135" selection-end-column="56" />
         </state>
       </provider>
     </entry>

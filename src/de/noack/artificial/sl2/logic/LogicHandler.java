@@ -41,7 +41,8 @@ public class LogicHandler {
 		for (Map.Entry <Item, Integer> inventoryEntry : market.getStock().getInventory().entrySet()) {
 			gridPane.add(new Label(inventoryEntry.getKey().getName()), xPos++, yPos);
 			gridPane.add(new Label("|"), xPos++, yPos);
-			gridPane.add(new Label(String.valueOf(inventoryEntry.getKey().getDemand())), xPos++, yPos);
+			String demand = String.valueOf(inventoryEntry.getKey().getDemand());
+			gridPane.add(new Label(demand.substring(0, Math.min(demand.length(), 4))), xPos++, yPos);
 			gridPane.add(new Label("|"), xPos++, yPos);
 			gridPane.add(new Label(String.valueOf(inventoryEntry.getValue())), xPos++, yPos);
 			gridPane.add(new Label("|"), xPos++, yPos);

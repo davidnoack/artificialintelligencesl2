@@ -133,7 +133,7 @@ public class StockSimulation extends Application {
 	}
 
 	public static void initMainWindow() {
-		Scene mainScene = new Scene(loadMainWindow(), 640, 320);
+		Scene mainScene = new Scene(loadMainWindow(), 500, 320);
 		window.setScene(mainScene);
 	}
 
