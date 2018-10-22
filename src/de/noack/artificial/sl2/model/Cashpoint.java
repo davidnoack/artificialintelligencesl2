@@ -2,6 +2,10 @@ package de.noack.artificial.sl2.model;
 
 import java.util.HashSet;
 
+/**
+ * Der Cashpoint stellt eine Kasse dar. Sie ist eindeutig einem "Elternmarkt"
+ * zugeordnet und besitzt eine Menge an Warenverkäufen.
+ */
 public class Cashpoint {
 
 	private Market parent;
@@ -12,6 +16,13 @@ public class Cashpoint {
 		this.soldItems = new HashSet <>();
 	}
 
+	/**
+	 * Ermittelt anhand eines Warennamens eine verkaufbare Ware.
+	 * Ist die Ware auf Lager, wird sie in die Warenverkäufe eingetragen,
+	 * ansonsten passiert nichts.
+	 *
+	 * @param itemName
+	 */
 	public void sellItem(String itemName) {
 		Item itemToSell = parent.getStock().retrieveSellableItem(itemName);
 		for (SoldItems alreadySoldItems : soldItems) {
