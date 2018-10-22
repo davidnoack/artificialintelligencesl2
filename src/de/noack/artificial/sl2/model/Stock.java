@@ -46,7 +46,7 @@ public class Stock {
 	 * @param amount
 	 * @return
 	 */
-	private boolean isEnoughSpaceFor(int amount) {
+	public boolean isEnoughSpaceFor(int amount) {
 		int sumUsedAmount = 0;
 		for (Integer usedAmount : inventory.values()) sumUsedAmount += usedAmount;
 		return (amount <= (maxSize - sumUsedAmount));

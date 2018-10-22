@@ -9,6 +9,10 @@ import javafx.scene.layout.GridPane;
 
 import java.util.Map;
 
+/**
+ * Kapselt sämtliche Zugriffe von außen auf das Modell. Ein Markt wird simuliert
+ * anhand der über die Oberfläche eingegebenen Daten.
+ */
 public class LogicHandler {
 
 	private Market market;
@@ -24,16 +28,36 @@ public class LogicHandler {
 		market = new Market(0);
 	}
 
+	/**
+	 * Fügt eine neue Ware hinzu. Die Lagergröße wird um den initialen
+	 * Bestand der Ware erhöht.
+	 *
+	 * @param name
+	 * @param stock
+	 */
 	public void addItem(String name, Integer stock) {
 		stockSize += stock;
 		market.getStock().setMaxSize(stockSize);
 		market.getStock().buyForInventory(new Item(name), stock);
 	}
 
+	/**
+	 * Fügt die aktuelle maximale Lagergröße der Oberfläche hinzu
+	 *
+	 * @param gridPane
+	 */
 	public void addStockSizeToDisplay(GridPane gridPane) {
-		gridPane.add(new Label("Stock Size: " + market.getStock().getMaxSize()), 0, 0);
+		gridPane.add(new Label("Stock Size: " +
+				market.getStock().getMaxSize()), 0, 0);
 	}
 
+	/**
+	 * Baut eine tabellarische Übersicht der Itemdaten auf
+	 *
+	 * @param gridPane
+	 * @param xPos
+	 * @param yPos
+	 */
 	public void displayItemData(GridPane gridPane, int xPos, int yPos) {
 
 		market.createCashpoint();
@@ -41,6 +65,7 @@ public class LogicHandler {
 		for (Map.Entry <Item, Integer> inventoryEntry : market.getStock().getInventory().entrySet()) {
 			gridPane.add(new Label(inventoryEntry.getKey().getName()), xPos++, yPos);
 			gridPane.add(new Label("|"), xPos++, yPos);
+			// Bedürfnis wird auf zwei Nachkommastellen gerundet.
 			String demand = String.valueOf(inventoryEntry.getKey().getDemand());
 			gridPane.add(new Label(demand.substring(0, Math.min(demand.length(), 4))), xPos++, yPos);
 			gridPane.add(new Label("|"), xPos++, yPos);
@@ -60,15 +85,32 @@ public class LogicHandler {
 		}
 	}
 
+	/**
+	 * Ruft die Methode zum Kauf einer Ware auf und aktualisiert die Anzeige
+	 *
+	 * @param itemToBuy
+	 * @param amount
+	 */
 	private void buyForInventoryAndRefreshDisplay(Item itemToBuy, int amount) {
 		market.getStock().buyForInventory(itemToBuy, amount);
-		market.recalculateDemandForAllItems();
-		market.refreshRecommendations();
-		StockSimulation.initMainWindow();
+		refreshDisplay();
 	}
 
+	/**
+	 * Ruft die Methode zum Verkauf einer Ware auf und aktualisiert die Anzeige
+	 *
+	 * @param itemName
+	 */
 	private void sellItemAndRefreshDisplay(String itemName) {
 		market.getRandomCashpoint().sellItem(itemName);
+		refreshDisplay();
+	}
+
+	/**
+	 * Hier wird die Nachfrage neu berechnet, die Empfehlungen angepasst und
+	 * das Hauptfenster neu gerendert.
+	 */
+	private void refreshDisplay() {
 		market.recalculateDemandForAllItems();
 		market.refreshRecommendations();
 		StockSimulation.initMainWindow();
